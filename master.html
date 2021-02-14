@@ -42,6 +42,53 @@
         </script>
         <style>
             .side-header #logo img {height: auto;}
+
+            /* Within style tags in your html file*/
+            * { box-sizing: border-box; }
+
+            .grid:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            .grid-sizer, .grid-item {
+                width: 33.333%;
+            }
+            @media (max-width: 575px) {
+                .grid-sizer, .grid-item {
+                    width: 100%;
+                }
+            }
+            @media (min-width: 576px) and (max-width: 767px) {
+                .grid-sizer, .grid-item {
+                    width: 50%;
+                }
+            }
+
+            /* To change the amount of columns on larger devices, uncomment the code below */
+             @media (min-width: 768px) and (max-width: 991px) {
+                .grid-sizer, .grid-item {
+                    width: 33.333%;
+                }
+            }
+            @media (min-width: 992px) and (max-width: 1199px) {
+                .grid-sizer, .grid-item {
+                    width: 25%;
+                }
+            }
+            @media (min-width: 1200px) {
+                .grid-sizer,.grid-item {
+                    width: 20%;
+                }
+            }
+            .grid-item {
+                float: left;
+            }
+            .grid-item img {
+                display: block;
+                max-width: 100%;
+            }
         </style>
     </head>
 
@@ -288,6 +335,104 @@
                     </ol>
                 </div>
             </section>
+
+            <section id="content">
+                <div class="container-fluid">
+                    <h1 class="my-4 font-weight-bold">Masonry - images option</h1>
+                    <div class="grid">
+                        <div class="grid-sizer"></div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/139_del2.jpg" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/178__ILL1765.jpg" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/178_del1.jpg" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/178_mas0001.JPG" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/178_mas0002.JPG" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/178_mas0003.JPG" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/178_mas0009.JPG" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/178_mas0010.JPG" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/178_mas0015.JPG" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/178_mas0016.JPG" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/178_mas0018.JPG" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/178_mas0019.JPG" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/178_mas0020.JPG" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/178_mas0021.JPG" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/178_mas0022.JPG" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/178_mas0023.JPG" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/178_mas0024.JPG" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/178_mas0025.JPG" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/178_mas0026.JPG" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/178_mas0027.JPG" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/178_watercolor.jpg" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/180_mas0030.JPG" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/140_mas0008.JPG" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/138_mas0005.JPG" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/148_mas0011.JPG" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/256_mas0012.JPG" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/133_mas0014.jpg" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/134_mas0017.jpg" />
+                        </div>
+                        <div class="grid-item">
+                            <img src="images/master/thumbnail/139_mas0013.JPG" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- #content end -->
+
             <footer id="footer" class="dark">
                 <div id="copyrights">
                     <div class="container">
@@ -325,6 +470,19 @@
         <!--disable right click and copy & paste-->
         <script type="text/javascript">
             $(document).ready(function(){$("body").bind("cut copy paste",function(n){n.preventDefault()}),$("body").on("contextmenu",function(n){return!1})});
+        </script>
+        <!-- init Masonry --> 
+        <script>
+            var $grid = $('.grid').masonry({
+                itemSelector: '.grid-item',
+                percentPosition: true,
+                columnWidth: '.grid-sizer'
+            });
+
+            // layout Masonry after each image loads
+            $grid.imagesLoaded().progress( function() {
+                $grid.masonry();
+            });
         </script>
     </body>
 </html>
