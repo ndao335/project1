@@ -42,52 +42,195 @@
         </script>
         <style>
             .side-header #logo img {height: auto;}
-
-            /* Within style tags in your html file*/
-            * { box-sizing: border-box; }
-
-            .grid:after {
-                content: '';
-                display: block;
-                clear: both;
+            
+            #content {
+                /* Prevent vertical gaps */
+                line-height: 0;
+                
+                -webkit-column-count: 5;
+                -webkit-column-gap:   0px;
+                -moz-column-count:    5;
+                -moz-column-gap:      0px;
+                column-count:         5;
+                column-gap:           0px;  
             }
 
-            .grid-sizer, .grid-item {
-                width: 33.333%;
+            #content img {
+                /* Just in case there are inline attributes */
+                width: 100% !important;
+                height: auto !important;
+                padding: 5px;
             }
-            @media (max-width: 575px) {
-                .grid-sizer, .grid-item {
+            
+
+            /* The Modal (background) */
+            .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 250px;
+            top: 0;
+            width: 83%;
+            max-width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: black;
+            }
+
+            /* Modal Content */
+            .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            width: 90%;
+            height: 90%;
+            max-width: 1200px;
+            }
+
+            /* The Close Button */
+            .close {
+            color: white;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 35px;
+            font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+            color: #999;
+            text-decoration: none;
+            cursor: pointer;
+            }
+
+            /* Hide the slides by default */
+            .mySlides {
+                display: none;
+                text-align: center;
+                margin: auto;
+            }
+
+            /* Next & previous buttons */
+            .prev,
+            .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: -50px;
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+                -webkit-user-select: none;
+            }
+
+            /* Position the "next button" to the right */
+            .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover,
+            .next:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            /* Number text (1/3 etc) */
+            .numbertext {
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+            }
+
+            /* Caption text */
+            .caption-container {
+                text-align: center;
+                background-color: black;
+                padding: 2px 16px;
+                color: white;
+            }
+
+            img.hover-shadow {
+                transition: 0.3s;
+            }
+
+            .hover-shadow:hover {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            #content .imgContent {
+                position: relative;
+                vertical-align: bottom;
+            }
+
+            #content a span {
+                display: none;
+                position: absolute;
+                bottom: 0;
+                left:0;
+                width: 100%;
+                height: auto;
+                padding: 20px;
+                padding-bottom: 40px;
+                font-size: 1vw;
+                background: rgba(255,255,255,.8);
+                word-wrap: normal;
+                
+            }
+
+            #content a:hover span {
+                display: block
+            }
+
+            @media (max-width: 1200px) {
+                #content {
+                    -moz-column-count:    4;
+                    -webkit-column-count: 4;
+                    column-count:         4;
+                }
+            }
+            @media (max-width: 1000px) {
+                #content {
+                    -moz-column-count:    3;
+                    -webkit-column-count: 3;
+                    column-count:         3;
+                }
+                .modal{
+                    left: 0;
                     width: 100%;
                 }
             }
-            @media (min-width: 576px) and (max-width: 767px) {
-                .grid-sizer, .grid-item {
-                    width: 50%;
+            @media (max-width: 800px) {
+                #content {
+                    -moz-column-count:    2;
+                    -webkit-column-count: 2;
+                    column-count:         2;
+                }
+                .modal{
+                    left: 0;
+                    width: 100%;
                 }
             }
-
-            /* To change the amount of columns on larger devices, uncomment the code below */
-             @media (min-width: 768px) and (max-width: 991px) {
-                .grid-sizer, .grid-item {
-                    width: 33.333%;
+            @media (max-width: 400px) {
+                #content {
+                    -moz-column-count:    1;
+                    -webkit-column-count: 1;
+                    column-count:         1;
                 }
-            }
-            @media (min-width: 992px) and (max-width: 1199px) {
-                .grid-sizer, .grid-item {
-                    width: 25%;
+                .modal{
+                    left: 0;
+                    width: 100%;
                 }
-            }
-            @media (min-width: 1200px) {
-                .grid-sizer,.grid-item {
-                    width: 20%;
-                }
-            }
-            .grid-item {
-                float: left;
-            }
-            .grid-item img {
-                display: block;
-                max-width: 100%;
             }
         </style>
     </head>
@@ -335,99 +478,255 @@
                     </ol>
                 </div>
             </section>
-
+            
             <section id="content">
-                <div class="container-fluid">
-                    <h1 class="my-4 font-weight-bold">Masonry - images option</h1>
-                    <div class="grid">
-                        <div class="grid-sizer"></div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/139_del2.jpg" />
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/139_del2.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" />
+                    <span>Kandinsky Inspired</span>
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/178__ILL1765.jpg"  onclick="openModal();currentSlide(2)" class="hover-shadow" />
+                    <span>Open Plains</span>
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/178_del1.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow" />
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/178_mas0001.JPG" onclick="openModal();currentSlide(4)" class="hover-shadow" />
+                    <span>Van Gogh's Starry Night 1</span>
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/178_mas0002.JPG" onclick="openModal();currentSlide(5)" class="hover-shadow" />
+                    <span>Magritte Painting in a Painting</span>
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/178_mas0003.JPG" onclick="openModal();currentSlide(6)" class="hover-shadow" />
+                    <span>Renoir Teapots & Fruit</span>
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/178_mas0009.JPG" onclick="openModal();currentSlide(7)" class="hover-shadow" />
+                    <span>Escher Love Doves</span>
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/178_mas0010.JPG" onclick="openModal();currentSlide(8)" class="hover-shadow" />
+                    <span>Henry Matisse/ 1st Grade</span>
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/178_mas0015.JPG" alt="Frank Stella" onclick="openModal();currentSlide(9)" class="hover-shadow" />
+                    <span>Frank Stella</span>
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/178_mas0016.JPG" alt="Modrian" onclick="openModal();currentSlide(10)" class="hover-shadow" />
+                    <span>Modrian</span>
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/178_mas0018.JPG" alt="Basquiat" onclick="openModal();currentSlide(11)" class="hover-shadow" />
+                    <span>Basquiat</span>
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/178_mas0019.JPG" alt="Jasper John's Inspired" onclick="openModal();currentSlide(12)" class="hover-shadow" />
+                    <span>Jasper John's Inspired</span>
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/178_mas0020.JPG" alt="Van Gogh's Starry Night 2" onclick="openModal();currentSlide(13)" class="hover-shadow" />
+                    <span>Van Gogh's Starry Night 2</span>
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/178_mas0021.JPG" alt="Hockney inspired painting of boy swimming in swimming pool" onclick="openModal();currentSlide(14)" class="hover-shadow" />
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/178_mas0022.JPG" alt="Inspired by Jackson Pollock 1" onclick="openModal();currentSlide(15)" class="hover-shadow" />
+                    <span>Inspired by Jackson Pollock 1</span>
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/178_mas0023.JPG" alt="Inspired by Jackson Pollock 2" onclick="openModal();currentSlide(16)" class="hover-shadow" />
+                    <span>Inspired by Jackson Pollock 2</span>
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/178_mas0024.JPG" alt="Inspired by Jackson Pollock 3" onclick="openModal();currentSlide(17)" class="hover-shadow" />
+                    <span>Inspired by Jackson Pollock 3</span>
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/178_mas0025.JPG" alt="Rothko Inspired" onclick="openModal();currentSlide(18)" class="hover-shadow" />
+                    <span>Rothko Inspired</span>
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/178_mas0026.JPG" alt="Salvador Dali inspired Butterfly Catamaran" onclick="openModal();currentSlide(19)" class="hover-shadow" />
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/178_mas0027.JPG" alt="Matisse inspired faces" onclick="openModal();currentSlide(20)" class="hover-shadow" />
+                    <span>Matisse inspired faces</span>
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/178_watercolor.jpg" alt="Water Color inspired by" onclick="openModal();currentSlide(21)" class="hover-shadow" />
+                    <span>Water Color inspired by</span>
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/180_mas0030.JPG" alt="Klimpt inspired Tree of Life 2014" onclick="openModal();currentSlide(22)" class="hover-shadow" />
+                    <span>Klimpt inspired Tree of Life 2014</span>
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/140_mas0008.JPG" alt="Seurat The Ocean View" onclick="openModal();currentSlide(23)" class="hover-shadow" />
+                    <span>Seurat The Ocean View</span>
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/138_mas0005.JPG" alt="Andy Warhol Recreation of Soup Can" onclick="openModal();currentSlide(24)" class="hover-shadow" />
+                </a>
+                <a class="imgContent"> 
+                    <img src="images/master/thumbnail/148_mas0011.JPG" alt="Da Vinci Mona Lisa 2005" onclick="openModal();currentSlide(25)" class="hover-shadow" />
+                    <span>Da Vinci Mona Lisa 2005</span>
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/256_mas0012.JPG" alt="Monet 1899, Bridge over a pool of water lilies, Created: 9.5.09" onclick="openModal();currentSlide(26)" class="hover-shadow" />
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/133_mas0014.jpg" alt="Matisse The Gold Fish" onclick="openModal();currentSlide(27)" class="hover-shadow" />
+                    <span>Matisse The Gold Fish</span>
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/134_mas0017.jpg" alt="Klimt inspired Tree of Life 2006" onclick="openModal();currentSlide(28)" class="hover-shadow" />
+                    <span>Klimt inspired Tree of Life 2006</span>
+                </a>
+                <a class="imgContent">
+                    <img src="images/master/thumbnail/139_mas0013.JPG" alt="Claude Monet pointillism" onclick="openModal();currentSlide(29)" class="hover-shadow" />
+                    <span>Claude Monet pointillism</span>
+                </a>
+                <div id="myModal" class="modal">
+                    <span class="close cursor" onclick="closeModal()">&times;</span>
+                    <div class="modal-content">
+                        <div class="mySlides">
+                            <div class="numbertext">1/29</div>
+                            <img src="images/master/img/376_del2.jpg" alt="Kandinsky Inspired">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/178__ILL1765.jpg" />
+                        <div class="mySlides">
+                            <div class="numbertext">2/29</div>
+                            <img src="images/master/img/480__ILL1765.jpg" alt="Open Plains">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/178_del1.jpg" />
+                        <div class="mySlides">
+                            <div class="numbertext">3/29</div>
+                            <img src="images/master/img/480_del1.jpg" alt="Modigliani Different Perspectives/ Styles of the Same Painting">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/178_mas0001.JPG" />
+                        <div class="mySlides">
+                            <div class="numbertext">4/29</div>
+                            <img src="images/master/img/480_mas0001.JPG" alt="Van Gogh's Starry Night 1">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/178_mas0002.JPG" />
+                        <div class="mySlides">
+                            <div class="numbertext">5/29</div>
+                            <img src="images/master/img/480_mas0002.JPG" alt="Magritte Painting in a Painting">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/178_mas0003.JPG" />
+                        <div class="mySlides">
+                            <div class="numbertext">6/29</div>
+                            <img src="images/master/img/480_mas0003.JPG" alt="Renoir Teapots & Fruit">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/178_mas0009.JPG" />
+                        <div class="mySlides">
+                            <div class="numbertext">7/29</div>
+                            <img src="images/master/img/480_mas0009.JPG" alt="Escher Love Doves">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/178_mas0010.JPG" />
+                        <div class="mySlides">
+                            <div class="numbertext">8/29</div>
+                            <img src="images/master/img/480_mas0010.JPG" alt="Henry Matisse/ 1st Grade">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/178_mas0015.JPG" />
+                        <div class="mySlides">
+                            <div class="numbertext">9/29</div>
+                            <img src="images/master/img/480_mas0015.jpg" alt="Frank Stella">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/178_mas0016.JPG" />
+                        <div class="mySlides">
+                            <div class="numbertext">10/29</div>
+                            <img src="images/master/img/480_mas0016.jpg" alt="Modrian">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/178_mas0018.JPG" />
+                        <div class="mySlides">
+                            <div class="numbertext">11/29</div>
+                            <img src="images/master/img/480_mas0018.jpg" alt="Basquiat">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/178_mas0019.JPG" />
+                        <div class="mySlides">
+                            <div class="numbertext">12/29</div>
+                            <img src="images/master/img/480_mas0019.JPG" alt="Jasper John's Inspired">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/178_mas0020.JPG" />
+                        <div class="mySlides">
+                            <div class="numbertext">13/29</div>
+                            <img src="images/master/img/480_mas0020.jpg" alt="Van Gogh's Starry Night 2">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/178_mas0021.JPG" />
+                        <div class="mySlides">
+                            <div class="numbertext">14/29</div>
+                            <img src="images/master/img/479_mas0021.jpg" alt="Hockney inspired painting of boy swimming in swimming pool">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/178_mas0022.JPG" />
+                        <div class="mySlides">
+                            <div class="numbertext">15/29</div>
+                            <img src="images/master/img/480_mas0022.jpg" alt="Inspired by Jackson Pollock 1">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/178_mas0023.JPG" />
+                        <div class="mySlides">
+                            <div class="numbertext">16/29</div>
+                            <img src="images/master/img/480_mas0023.JPG" alt="Inspired by Jackson Pollock 2">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/178_mas0024.JPG" />
+                        <div class="mySlides">
+                            <div class="numbertext">17/29</div>
+                            <img src="images/master/img/479_mas0024.JPG" alt="Inspired by Jackson Pollock 3">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/178_mas0025.JPG" />
+                        <div class="mySlides">
+                            <div class="numbertext">18/29</div>
+                            <img src="images/master/img/480_mas0025.jpg" alt="Rothko Inspired">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/178_mas0026.JPG" />
+
+                        <div class="mySlides">
+                            <div class="numbertext">19/29</div>
+                            <img src="images/master/img/480_mas0026.jpg" alt="Salvador Dali inspired Butterfly Catamaran">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/178_mas0027.JPG" />
+
+                        <div class="mySlides">
+                            <div class="numbertext">20/29</div>
+                            <img src="images/master/img/480_mas0027.jpg" alt="Matisse inspired faces">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/178_watercolor.jpg" />
+                        <div class="mySlides">
+                            <div class="numbertext">21/29</div>
+                            <img src="images/master/img/480_watercolor.JPG" alt="Water Color inspired by">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/180_mas0030.JPG" />
+                        <div class="mySlides">
+                            <div class="numbertext">22/29</div>
+                            <img src="images/master/img/358_mas0030.jpg" alt="Klimpt inspired Tree of Life 2014">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/140_mas0008.JPG" />
+
+                        <div class="mySlides">
+                            <div class="numbertext">23/29</div>
+                            <img src="images/master/img/377_mas0008.jpg" alt="Seurat The Ocean View">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/138_mas0005.JPG" />
+
+                        <div class="mySlides">
+                            <div class="numbertext">24/29</div>
+                            <img src="images/master/img/373_mas0005.jpg" alt="Andy Warhol Recreation of Soup Can">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/148_mas0011.JPG" />
+
+                        <div class="mySlides">
+                            <div class="numbertext">25/29</div>
+                            <img src="images/master/img/399_mas0011.JPG" alt="Da Vinci Mona Lisa 2005">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/256_mas0012.JPG" />
+                        <div class="mySlides">
+                            <div class="numbertext">26/29</div>
+                            <img src="images/master/img/402_mas0012.jpg" alt="Monet 1899, Bridge over a pool of water lilies, Created: 9.5.09">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/133_mas0014.jpg" />
+
+                        <div class="mySlides">
+                            <div class="numbertext">27/29</div>
+                            <img src="images/master/img/359_mas0014.jpg" alt="Matisse The Gold Fish">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/134_mas0017.jpg" />
+
+                        <div class="mySlides">
+                            <div class="numbertext">28/29</div>
+                            <img src="images/master/img/363_mas0017.jpg" alt="Klimt inspired Tree of Life 2006">
                         </div>
-                        <div class="grid-item">
-                            <img src="images/master/thumbnail/139_mas0013.JPG" />
+
+                        <div class="mySlides">
+                            <div class="numbertext">29/29</div>
+                            <img src="images/master/img/376_mas0013.JPG" alt="Claude Monet pointillism">
                         </div>
+                    </div>
+
+                    <!-- Next/previous controls -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <!-- Caption text -->
+                    <div class="caption-container">
+                        <p id="caption"></p>
                     </div>
                 </div>
             </section>
@@ -473,6 +772,7 @@
         </script>
         <!-- init Masonry --> 
         <script>
+            /*
             var $grid = $('.grid').masonry({
                 itemSelector: '.grid-item',
                 percentPosition: true,
@@ -482,7 +782,45 @@
             // layout Masonry after each image loads
             $grid.imagesLoaded().progress( function() {
                 $grid.masonry();
-            });
+            });*/
+        </script>
+        <script>
+            // Open the Modal
+            function openModal(e) {
+                document.getElementById("myModal").style.display = "block";
+            }
+            
+            // Close the Modal
+            function closeModal() {
+                document.getElementById("myModal").style.display = "none";
+            }
+            
+            var slideIndex = 1;
+                showSlides(slideIndex);
+            
+            // Next/previous controls
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var captionText = document.getElementById("caption");
+                
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[slideIndex-1].style.display = "block";
+                document.getElementById("caption").innerHTML= slides[slideIndex-1].getElementsByTagName("img")[0].alt;
+            }
         </script>
     </body>
 </html>
