@@ -66,6 +66,10 @@
 	.carousel-control-prev-icon{
 		filter: invert(1);
 	} 
+	.carousel-control-prev,
+	.carousel-control-next{
+		height: 50%;
+	}
 	.carousel-inner{
 		width:700px;
 		height: auto;
@@ -74,9 +78,13 @@
 	#custCarousel{
 		margin-top: 20px;
 	}
+
 	#custCarousel .carousel-indicators {
 		position: static;
 		margin-top: 20px;
+		flex-wrap: wrap;
+		list-style-type: none;
+		padding-left: 0;
 
 	}
 	#custCarousel .carousel-indicators>li {
@@ -510,8 +518,6 @@
 								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="9">
 									<img src="images/robots/thumbnail/83_rob0010.jpg" class="img-fluid">
 								</li>
-							</ol>
-							<ol class="carousel-indicators list-inline d-flex align-items-center">
 								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="10">
 									<img src="images/robots/thumbnail/83_rob0011.jpg" class="img-fluid">
 								</li>
@@ -542,8 +548,6 @@
 								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="19">
 									<img src="images/robots/thumbnail/83_rob0020.jpg" class="img-fluid">
 								</li>
-							</ol>
-							<ol class="carousel-indicators list-inline d-flex align-items-center">
 								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="20">
 									<img src="images/robots/thumbnail/83_rob0021.jpg" class="img-fluid">
 								</li>
