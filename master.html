@@ -1,826 +1,632 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
-    <head http-equiv="content-type" content="text/html; charset=utf-8">
-        	<!-- Stylesheets
-        ============================================= -->
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css" />
-        <link rel="stylesheet" href="assets/style.css" type="text/css" />
-        <link rel="stylesheet" href="assets/css/dark.css" type="text/css" />
-        <link rel="stylesheet" href="assets/css/font-icons.css" type="text/css" />
-        <link rel="stylesheet" href="assets/css/animate.css" type="text/css" />
-        <link rel="stylesheet" href="assets/css/magnific-popup.css" type="text/css" />
-        <link rel="stylesheet" href="assets/css/custom.css" type="text/css" />
-        <!-- Meta Tags -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta property="og:locale" content="en_US">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Master | ethanAart" />
-        <meta property="og:description" content="Master art by Ethan Altshuler created during his childhood">
-        <meta property="og:url" content="https://ethanaart.com/">
-        <meta property="og:site_name" content="ethanAart.com">
-        <meta property="og:image" content="https://ethanAart.com/images/og-color-logo-ethanaart.jpg" />
-        <title> Master | ethanAart </title>
-        <meta name="description" content=" Master art by Ethan Altshuler created during his childhood"/>
-        <meta name="keywords" content="Master art, childhood" />
-        <meta name="robots" content="all,follow" />
-        <meta name="googlebot" content="index,follow,snippet,archive" />
-        <meta name="twitter:card" content="https://ethanAart.com/images/og-color-logo-ethanaart.jpg">
-        <meta name="twitter:title" content=" Master | ethanAart ">
-        <meta name="twitter:url" content=" https://ethanaart.com/Master.html"/>
-        <meta name="twitter:description" content=" Master art by Ethan Altshuler created during his
-        childhood ">
-        <meta name="twitter:image" content=" https://ethanAart.com/images/og-color-logo-ethanaart.jpg"/>
 
-        <link rel="shortcut icon" href="/favicon.ico"/>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130204150-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-130204150-1');
-        </script>
-        <style>
-            .side-header #logo img {height: auto;}
-            
-            #content {
-                /* Prevent vertical gaps */
-                line-height: 0;
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<!-- Stylesheets
+	============================================= -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="assets/style.css" type="text/css" />
+	<link rel="stylesheet" href="assets/css/dark.css" type="text/css" />
+	<link rel="stylesheet" href="assets/css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="assets/css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="assets/css/magnific-popup.css" type="text/css" />
+	<link rel="stylesheet" href="assets/css/custom.css" type="text/css" />
+	<link rel="stylesheet" href="assets/css/holidaycards.css" type="text/css" />
+   
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Master | ethanAart" />
+	<meta property="og:description" content="Master art by Ethan Altshuler created during his childhood">
+	<meta property="og:url" content="https://myclone.page/">
+	<meta property="og:site_name" content="myclone.page">
+	<meta property="og:image" content="https://myclone.page/images/og-color-logo-ethanaart.jpg" />
+	<title> | ethanAart</title>
+	<meta name="description" content=" Master art by Ethan Altshuler created during his childhood" />
+	<meta name="keywords" content="Master art, childhood" />
+	<meta name="Master" content="all,follow" />
+	<meta name="googlebot" content="index,follow,snippet,archive" />
+	<meta name="twitter:card" content="https://myclone.page/images/og-color-logo-ethanaart.jpg">
+	<meta name="twitter:title" content="Master | ethanAart ">
+	<meta name="twitter:url" content=" https://myclone.page/ethanentersmidteens.html" />
+	<meta name="twitter:description" content=" Abstract art by Ethan Altshuler created during his childhood ">
+	<meta name="twitter:image" content=" https://myclone.page/images/og-color-logo-ethanaart.jpg" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130204150-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+		
+			gtag('config', 'UA-130204150-1');
+
+	// init Masonry
+	var $grid = $('.grid').masonry({
+		itemSelector: '.grid-item',
+		percentPosition: true,
+		columnWidth: '.grid-sizer'
+	});
+
+	// layout Masonry after each image loads
+	$grid.imagesLoaded().progress( function() {
+		$grid.masonry();
+	});  
+	</script>
+
+	<style>
+	.side-header #logo img {
+		height: auto !important;
+	}
+	.carousel-control-next-icon, 
+	.carousel-control-prev-icon{
+		filter: invert(1);
+	} 
+	.carousel-control-prev,
+	.carousel-control-next{
+		height: 50%;
+	}
+	.carousel-inner{
+		width:700px;
+		height: auto;
+		margin: 0 auto;
+	}
+	#custCarousel{
+		margin-top: 20px;
+	}
+
+	#custCarousel .carousel-indicators {
+		position: static;
+		margin-top: 20px;
+		flex-wrap: wrap;
+		list-style-type: none;
+		padding-left: 0;
+
+	}
+	#custCarousel .carousel-indicators>li {
+		padding-bottom: 40px;
+		width: 100px;
+		margin-bottom: 80px;
+
+	}
+	#custCarousel .carousel-indicators li img {
+		display: block;
+		max-width: 100%;  
+	}
+	#custCarousel .carousel-indicators li.active img {
+		border: 2px solid grey;
+	}
+	.carousel-item img {
+		width: 80%
+	}
+	@media screen and (max-width: 800px){
+		.carousel-inner{
+			width:450px;
+			height: 650px;
+			margin: 0 auto;
+		}
+	}
+	</style>
+</head>
+
+<body class="stretched side-header">
+	<div id="wrapper" class="clearfix">
+		<header id="header">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row justify-content-between">
+						<div id="logo">
+							<a href="index.html" class="standard-logo" data-dark-logo="../images/350_colorLogo.jpg">
+								<img src="images/350_colorLogo.jpg" alt="Ethan Altshuler myclone.page Logo">
+							</a>
+							<a href="index.html" class="retina-logo" data-dark-logo="../images/350_colorLogo.jpg">
+								<img src="images/350_colorLogo.jpg" alt="Ethan Altshuler myclone.page Logo">
+							</a>
+						</div>
+						<!-- #logo end -->
+						<div id="primary-menu-trigger">
+							<svg class="svg-trigger" viewBox="0 0 100 100">
+								<path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path>
+								<path d="m 30,50 h 40"></path>
+								<path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
+							</svg>
+						</div>
+						<div class="header-misc d-none d-sm-block">
+							<img src="images/119_Sketching_at_the_bluffs_6_.jpg" alt="" style="" border="0">
+							<div class="d-flex my-lg-3">
+								<a href="https://www.facebook.com/ethanAart/" class="social-icon si-small si-borderless si-facebook">	<i class="icon-facebook"></i>
+									<i class="icon-facebook"></i>
+								</a>
+								<a href="https://www.instagram.com/ethanaart/" class="social-icon si-small si-borderless si-pinterest">	<i class="icon-instagram"></i>
+									<i class="icon-instagram"></i>
+								</a>
+								<a href="https://ethanaart.shop/" class="social-icon si-small si-borderless si-github">	<i class="icon-store"></i>
+									<i class="icon-store"></i>
+								</a>
+							</div>
+						</div>
+						<nav class="primary-menu on-click">
+							<ul class="menu-container">
+								<li class="menu-item">
+									<a class="menu-link" href="3dart.html">
+										<div>3-D Art</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="#">
+										<div>About Ethan</div>
+									</a>
+									<ul class="sub-menu-container">
+										<li class="menu-item">
+											<a class="menu-link" href="aboutethan.html">
+												<div>Young Ethan</div>
+											</a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="ethanentersmidteens.html">
+												<div>Ethan Enters Mid-Teens</div>
+											</a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="ethaninaction.html">
+												<div>Ethan In Action</div>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="abstract.html">
+										<div>Abstract</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="accolades.html">
+										<div>Accolades</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="airplanes.html">
+										<div>Airplanes</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="#">
+										<div>Animal, Nature & Planets</div>
+									</a>
+									<ul class="sub-menu-container">
+										<li class="menu-item">
+											<a class="menu-link" href="animalkingdom.html">
+												<div>Animal Kingdom</div>
+											</a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="animalsnatureplanets.html">
+												<div>Animals, Nature & Planets</div>
+											</a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="dog-planes.html">
+												<div>Dog Planes</div>
+											</a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="dogs-in-flight.html">
+												<div>Dogs in Flight</div>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="animationprojects.html">
+										<div>Early Animation Projects</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="artforsale.html">
+										<div>Art for Sale</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="charity.html">
+										<div>Charity</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="commissioned.html">
+										<div>Commissioned Art</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="ethansphotoshops.html">
+										<div>Photoshops</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="holidaycards.html">
+										<div>Holiday Cards</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="homelife.html">
+										<div>Home Life</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="masters.html">
+										<div>Masters</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="newsletters.html">
+										<div>Newsletters</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="nicaraguatrip.html">
+										<div>Nicaragua Trip</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="perspective.html">
+										<div>Perspective</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="#">
+										<div>Pop Culture</div>
+									</a>
+									<ul class="sub-menu-container">
+										<li class="menu-item">
+											<a class="menu-link" href="#">
+												<div>Despicable Me</div>
+											</a>
+											<ul class="sub-menu-container">
+												<li class="menu-item">
+													<a class="menu-link" href="despicablemeanimation.html">
+														<div>Despicable Me Animation</div>
+													</a>
+												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="despicablemecomics.html">
+														<div>Despicable Me Comics</div>
+													</a>
+												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="despicablemeideas.html">
+														<div>Despicable Me Ideas</div>
+													</a>
+												</li>
+												<li class="menu-item">
+													<a class="menu-link" href="despicablemestoryboards.html">
+														<div>Despicable Me Story Boards</div>
+													</a>
+												</li>
+											</ul>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="familyguy.html">
+												<div>Family Guy</div>
+											</a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="hungergames.html">
+												<div>Hunger Games</div>
+											</a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="powerboystory.html">
+												<div>Power Boy Story</div>
+											</a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="rocknroll.html">
+												<div>Rock n' Roll</div>
+											</a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="linkinpark.html">
+												<div>Linkin Park</div>
+											</a>
+										</li>
+								<li class="menu-item">
+									<a class="menu-link" href="tshirtdesigns.html">
+										<div>Early T-Shirt Designs</div>
+									</a>
+								</li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header>
+		<section id="page-title">
+			<div class="container clearfix">
+				<h1>Master</h1>
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="#">Home</a>
+					</li>
+					<li class="breadcrumb-item active" aria-current="page">Master</li>
+				</ol>
+			</div>
+		</section>
+    <section> 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
+                        <!-- slides -->
+                        <div class="carousel-inner d-flex align-items-center">
+                            <div class="carousel-item active">
+								<img src="images/master/img/376_del2.jpg" alt="Kandinsky Inspired">
+								<h3 style="text-align: center">Kandinsky Inspired</h3>
+                            </div>
+                            <div class="carousel-item">
+								<img src="images/master/img/480__ILL1765.jpg" alt="Open Plains">
+								<h3 style="text-align: center">Open Plains</h3>
+                            </div>
+                            <div class="carousel-item">
+								<img src="images/master/img/480_del1.jpg" alt="Modigliani Different Perspectives/ Styles of the Same Painting">
+								<h3 style="text-align: center">Modigliani Different Perspectives/ Styles of the Same Painting</h3>
+                            </div>
+                            <div class="carousel-item">
+								<img src="images/master/img/480_mas0001.JPG" alt="Van Gogh's Starry Night 1">
+								<h3 style="text-align: center">Van Gogh's Starry Night 1</h3>
+							</div>
+							<div class="carousel-item">
+								<img src="images/master/img/480_mas0002.JPG" alt="Magritte Painting in a Painting">
+								<h3 style="text-align: center">Magritte Painting in a Painting</h3>
+							</div>
+							<div class="carousel-item">
+								<img src="images/master/img/480_mas0003.JPG" alt="Renoir Teapots & Fruit">
+								<h3 style="text-align: center">Renoir Teapots & Fruit</h3>
+							</div>
+							<div class="carousel-item">
+								<img src="images/master/img/480_mas0009.JPG" alt="Escher Love Doves">
+								<h3 style="text-align: center">Escher Love Doves</h3>
+							</div>
+							<div class="carousel-item">
+								<img src="images/master/img/480_mas0010.JPG" alt="Henry Matisse/ 1st Grade">
+								<h3 style="text-align: center">Henry Matisse/ 1st Grade</h3>
+							</div>
+							<div class="carousel-item">
+								<img src="images/master/img/480_mas0015.jpg" alt="Frank Stella">
+								<h3 style="text-align: center">Frank Stella</h3>
+							</div>
+							<div class="carousel-item">
+								<img src="images/master/img/480_mas0016.jpg" alt="Modrian">
+								<h3 style="text-align: center">Modrian</h3>
+							</div>
+							<div class="carousel-item">
+								<img src="images/master/img/480_mas0018.jpg" alt="Basquiat">
+								<h3 style="text-align: center">Basquiat</h3>
+							</div>
+							<div class="carousel-item">
+								<img src="images/master/img/480_mas0019.JPG" alt="Jasper John's Inspired">
+								<h3 style="text-align: center">Jasper John's Inspired</h3>
+							</div>
+							<div class="carousel-item">
+								<img src="images/master/img/480_mas0020.jpg" alt="Van Gogh's Starry Night 2">
+								<h3 style="text-align: center">Van Gogh's Starry Night 2</h3>
+							</div>
+							<div class="carousel-item">
+								<img src="images/master/img/479_mas0021.jpg" alt="Hockney inspired painting of boy swimming in swimming pool">
+								<h3 style="text-align: center">Hockney inspired painting of boy swimming in swimming pool</h3>
+							</div>
+							<div class="carousel-item">
+								<img src="images/master/img/480_mas0022.jpg" alt="Inspired by Jackson Pollock 1">
+								<h3 style="text-align: center">Inspired by Jackson Pollock 1</h3>
+							</div>
+							<div class="carousel-item">
+								<img src="images/master/img/480_mas0023.JPG" alt="Inspired by Jackson Pollock 2">
+								<h3 style="text-align: center">Inspired by Jackson Pollock 2</h3>
+							</div>
+							<div class="carousel-item">
+								<img src="images/master/img/479_mas0024.JPG" alt="Inspired by Jackson Pollock 3">
+								<h3 style="text-align: center">Inspired by Jackson Pollock 3</h3>
+							</div>
+							<div class="carousel-item">
+								<img src="images/master/img/480_mas0025.jpg" alt="Rothko Inspired">
+								<h3 style="text-align: center">Rothko Inspired</h3>
+							</div>
+							<div class="carousel-item">
+								<img src="images/master/img/480_mas0026.jpg" alt="Salvador Dali inspired Butterfly Catamaran">
+								<h3 style="text-align: center">Salvador Dali inspired Butterfly Catamaran</h3>
+							</div>
+							<div class="carousel-item">
+									<img src="images/master/img/480_mas0027.jpg" alt="Matisse inspired faces">
+									<h3 style="text-align: center">Matisse inspired faces/h3>
+							</div>
+							<div class="carousel-item">
+									<img src="images/master/img/480_watercolor.JPG" alt="Water Color inspired by">
+									<h3 style="text-align: center">Water Color inspired by</h3>
+							</div>
+							<div class="carousel-item">
+									<img src="images/master/img/358_mas0030.jpg" alt="Klimpt inspired Tree of Life 2014">
+									<h3 style="text-align: center">Klimpt inspired Tree of Life 2014</h3>
+							</div>
+							<div class="carousel-item">
+									<img src="images/master/img/377_mas0008.jpg" alt="Seurat The Ocean View">
+									<h3 style="text-align: center">Seurat The Ocean View</h3>
+							</div>
+							<div class="carousel-item">
+									<img src="images/master/img/373_mas0005.jpg" alt="Andy Warhol Recreation of Soup Can">
+									<h3 style="text-align: center">Andy Warhol Recreation of Soup Can</h3>
+							</div>
+							<div class="carousel-item">
+									<img src="images/master/img/399_mas0011.JPG" alt="Da Vinci Mona Lisa 2005">
+									<h3 style="text-align: center">Da Vinci Mona Lisa 2005</h3>
+							</div>
+							<div class="carousel-item">
+									<img src="images/master/img/402_mas0012.jpg" alt="Monet 1899, Bridge over a pool of water lilies, Created: 9.5.09">
+									<h3 style="text-align: center">Monet 1899, Bridge over a pool of water lilies, Created: 9.5.09</h3>
+							</div>
+							<div class="carousel-item">
+									<img src="images/master/img/359_mas0014.jpg" alt="Matisse The Gold Fish">
+									<h3 style="text-align: center">Matisse The Gold Fish</h3>
+							</div>
+							<div class="carousel-item">
+									<img src="images/master/img/363_mas0017.jpg" alt="Klimt inspired Tree of Life 2006">
+									<h3 style="text-align: center">Klimt inspired Tree of Life 2006</h3>
+							</div>
+							<div class="carousel-item">
+									<img src="images/master/img/376_mas0013.JPG" alt="Claude Monet pointillism">
+									<h3 style="text-align: center">Claude Monet pointillism</h3>
+							</div>
+
+						</div> 
+						
+						<!-- Left right --> 
+                        <a class="carousel-control-prev" href="#custCarousel" data-slide="prev"> 
+                            <span class="carousel-control-prev-icon"></span> </a> 
+                        <a class="carousel-control-next" href="#custCarousel" data-slide="next"> 
+                            <span class="carousel-control-next-icon"></span> </a> <!-- Thumbnails -->
+                            <ol class="carousel-indicators list-inline d-flex align-items-center">
+                                <li class="list-inline-item active" id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel"> 
+									<img src="images/master/thumbnail/139_del2.jpg" class="img-fluid">
+								</li>
+								<li class="list-inline-item" id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel"> 
+									<img src="images/master/thumbnail/178__ILL1765.jpg" class="img-fluid"> 
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-slide-to="2" data-target="#custCarousel"> 
+									<img src="images/master/thumbnail/178_del1.jpg" class="img-fluid"> 
+								</li>
+                                <li class="list-inline-item" id="carousel-selector-2" data-slide-to="3" data-target="#custCarousel"> 
+									<img src="images/master/thumbnail/178_mas0001.JPG" class="img-fluid"> 
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="4">
+									<img src="images/master/thumbnail/178_mas0002.JPG" class="img-fluid">
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="5">
+									<img src="images/master/thumbnail/178_mas0003.JPG" class="img-fluid">
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="6">
+									<img src="images/master/thumbnail/178_mas0009.JPG" class="img-fluid">
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="7">
+									<img src="images/master/thumbnail/178_mas0010.JPG" class="img-fluid">
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="8">
+									<img src="images/master/thumbnail/178_mas0015.JPG" class="img-fluid">
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="9">
+									<img src="images/master/thumbnail/178_mas0016.JPG" class="img-fluid">
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="10">
+									<img src="images/master/thumbnail/178_mas0018.JPG" class="img-fluid">
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="11">
+									<img src="images/master/thumbnail/178_mas0019.JPG" class="img-fluid">
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="12">
+									<img src="images/master/thumbnail/178_mas0020.JPG" class="img-fluid">
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="13">
+									<img src="images/master/thumbnail/178_mas0021.JPG" class="img-fluid">
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="14">
+									<img src="images/master/thumbnail/178_mas0022.JPG" class="img-fluid">
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="15">
+									<img src="images/master/thumbnail/178_mas0023.JPG" class="img-fluid">
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="16">
+									<img src="images/master/thumbnail/178_mas0024.JPG" class="img-fluid">
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="17">
+									<img src="images/master/thumbnail/178_mas0025.JPG" class="img-fluid">
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="18">
+									<img src="images/master/thumbnail/178_mas0026.JPG" class="img-fluid">
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="19">
+									<img src="images/master/thumbnail/178_mas0027.JPG" class="img-fluid">
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="20">
+									<img src="images/master/thumbnail/178_watercolor.jpg" class="img-fluid">
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="21">
+									<img src="images/master/thumbnail/180_mas0030.JPG" class="img-fluid">
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="22">
+									<img src="images/master/thumbnail/140_mas0008.JPG" class="img-fluid">
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="23">
+									<img src="images/master/thumbnail/138_mas0005.JPG" class="img-fluid">
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="24">
+									<img src="images/master/thumbnail/148_mas0011.JPG" class="img-fluid">
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="25">
+									<img src="images/master/thumbnail/256_mas0012.JPG" class="img-fluid">
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="26">
+									<img src="images/master/thumbnail/133_mas0014.jpg" class="img-fluid">
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="27">
+									<img src="images/master/thumbnail/134_mas0017.jpg" class="img-fluid">
+								</li>
+								<li class="list-inline-item" id="carousel-selector-2" data-target="#custCarousel" data-slide-to="28">
+									<img src="images/master/thumbnail/139_mas0013.JPG" class="img-fluid">
+								</li>
+                            </ol>
+                    </div>
+
+                </div>
                 
-                -webkit-column-count: 5;
-                -webkit-column-gap:   0px;
-                -moz-column-count:    5;
-                -moz-column-gap:      0px;
-                column-count:         5;
-                column-gap:           0px;  
-            }
-
-            #content img {
-                /* Just in case there are inline attributes */
-                width: 100% !important;
-                height: auto !important;
-                padding: 5px;
-            }
-            
-
-            /* The Modal (background) */
-            .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            padding-top: 100px;
-            left: 250px;
-            top: 0;
-            width: 83%;
-            max-width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: black;
-            }
-
-            /* Modal Content */
-            .modal-content {
-            position: relative;
-            background-color: #fefefe;
-            margin: auto;
-            padding: 0;
-            width: 90%;
-            height: 90%;
-            max-width: 1200px;
-            }
-
-            /* The Close Button */
-            .close {
-            color: white;
-            position: absolute;
-            top: 10px;
-            right: 25px;
-            font-size: 35px;
-            font-weight: bold;
-            }
-
-            .close:hover,
-            .close:focus {
-            color: #999;
-            text-decoration: none;
-            cursor: pointer;
-            }
-
-            /* Hide the slides by default */
-            .mySlides {
-                display: none;
-                text-align: center;
-                margin: auto;
-            }
-
-            /* Next & previous buttons */
-            .prev,
-            .next {
-                cursor: pointer;
-                position: absolute;
-                top: 50%;
-                width: auto;
-                padding: 16px;
-                margin-top: -50px;
-                color: white;
-                font-weight: bold;
-                font-size: 20px;
-                transition: 0.6s ease;
-                border-radius: 0 3px 3px 0;
-                user-select: none;
-                -webkit-user-select: none;
-            }
-
-            /* Position the "next button" to the right */
-            .next {
-                right: 0;
-                border-radius: 3px 0 0 3px;
-            }
-
-            /* On hover, add a black background color with a little bit see-through */
-            .prev:hover,
-            .next:hover {
-                background-color: rgba(0, 0, 0, 0.8);
-            }
-
-            /* Number text (1/3 etc) */
-            .numbertext {
-                color: #f2f2f2;
-                font-size: 12px;
-                padding: 8px 12px;
-                position: absolute;
-                top: 0;
-            }
-
-            /* Caption text */
-            .caption-container {
-                text-align: center;
-                background-color: black;
-                padding: 2px 16px;
-                color: white;
-            }
-
-            img.hover-shadow {
-                transition: 0.3s;
-            }
-
-            .hover-shadow:hover {
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            }
-
-            #content .imgContent {
-                position: relative;
-                vertical-align: bottom;
-            }
-
-            #content a span {
-                display: none;
-                position: absolute;
-                bottom: 0;
-                left:0;
-                width: 100%;
-                height: auto;
-                padding: 20px;
-                padding-bottom: 40px;
-                font-size: 1vw;
-                background: rgba(255,255,255,.8);
-                word-wrap: normal;
-                
-            }
-
-            #content a:hover span {
-                display: block
-            }
-
-            @media (max-width: 1200px) {
-                #content {
-                    -moz-column-count:    4;
-                    -webkit-column-count: 4;
-                    column-count:         4;
-                }
-            }
-            @media (max-width: 1000px) {
-                #content {
-                    -moz-column-count:    3;
-                    -webkit-column-count: 3;
-                    column-count:         3;
-                }
-                .modal{
-                    left: 0;
-                    width: 100%;
-                }
-            }
-            @media (max-width: 800px) {
-                #content {
-                    -moz-column-count:    2;
-                    -webkit-column-count: 2;
-                    column-count:         2;
-                }
-                .modal{
-                    left: 0;
-                    width: 100%;
-                }
-            }
-            @media (max-width: 400px) {
-                #content {
-                    -moz-column-count:    1;
-                    -webkit-column-count: 1;
-                    column-count:         1;
-                }
-                .modal{
-                    left: 0;
-                    width: 100%;
-                }
-            }
-        </style>
-    </head>
-
-    <body class="stretched side-header">
-        <div id="wrapper" class="clearfix">
-            <header id="header">
-                <div id="header-wrap">
-                    <div class="container">
-                        <div class="header-row justify-content-between">
-                            <div id="logo">
-                                <a href="index.html" class="standard-logo" data-dark-logo="../images/350_colorLogo.jpg">
-                                    <img src="images/350_colorLogo.jpg" alt="Ethan Altshuler myclone.page Logo">
-                                </a>
-                                <a href="index.html" class="retina-logo" data-dark-logo="../images/350_colorLogo.jpg">
-                                    <img src="images/350_colorLogo.jpg" alt="Ethan Altshuler myclone.page Logo">
-                                </a>
-                            </div>
-                            <!-- #logo end -->
-                            <div id="primary-menu-trigger">
-                                <svg class="svg-trigger" viewBox="0 0 100 100">
-                                    <path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path>
-                                    <path d="m 30,50 h 40"></path>
-                                    <path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
-                                </svg>
-                            </div>
-                            <div class="header-misc d-none d-sm-block">
-                                <img src="images/119_Sketching_at_the_bluffs_6_.jpg" alt="" style="" border="0">
-                                <div class="d-flex my-lg-3">
-                                    <a href="https://www.facebook.com/ethanAart/" class="social-icon si-small si-borderless si-facebook">	<i class="icon-facebook"></i>
-                                        <i class="icon-facebook"></i>
-                                    </a>
-                                    <a href="https://www.instagram.com/ethanaart/" class="social-icon si-small si-borderless si-pinterest">	<i class="icon-instagram"></i>
-                                        <i class="icon-instagram"></i>
-                                    </a>
-                                    <a href="https://ethanaart.shop/" class="social-icon si-small si-borderless si-github">	<i class="icon-store"></i>
-                                        <i class="icon-store"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <nav class="primary-menu on-click">
-                                <ul class="menu-container">
-                                    <li class="menu-item">
-                                        <a class="menu-link" href="3dart.html">
-                                            <div>3-D Art</div>
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a class="menu-link" href="#">
-                                            <div>About Ethan</div>
-                                        </a>
-                                        <ul class="sub-menu-container">
-                                            <li class="menu-item">
-                                                <a class="menu-link" href="aboutethan.html">
-                                                    <div>Young Ethan</div>
-                                                </a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a class="menu-link" href="ethanentersmidteens.html">
-                                                    <div>Ethan Enters Mid-Teens</div>
-                                                </a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a class="menu-link" href="ethaninaction.html">
-                                                    <div>Ethan In Action</div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a class="menu-link" href="abstract.html">
-                                            <div>Abstract</div>
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a class="menu-link" href="accolades.html">
-                                            <div>Accolades</div>
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a class="menu-link" href="airplanes.html">
-                                            <div>Airplanes</div>
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a class="menu-link" href="#">
-                                            <div>Animal, Nature & Planets</div>
-                                        </a>
-                                        <ul class="sub-menu-container">
-                                            <li class="menu-item">
-                                                <a class="menu-link" href="animalkingdom.html">
-                                                    <div>Animal Kingdom</div>
-                                                </a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a class="menu-link" href="animalsnatureplanets.html">
-                                                    <div>Animals, Nature & Planets</div>
-                                                </a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a class="menu-link" href="dog-planes.html">
-                                                    <div>Dog Planes</div>
-                                                </a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a class="menu-link" href="dogs-in-flight.html">
-                                                    <div>Dogs in Flight</div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a class="menu-link" href="animationprojects.html">
-                                            <div>Early Animation Projects</div>
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a class="menu-link" href="artforsale.html">
-                                            <div>Art for Sale</div>
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a class="menu-link" href="charity.html">
-                                            <div>Charity</div>
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a class="menu-link" href="commissioned.html">
-                                            <div>Commissioned Art</div>
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a class="menu-link" href="ethansphotoshops.html">
-                                            <div>Photoshops</div>
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a class="menu-link" href="holidaycards.html">
-                                            <div>Holiday Cards</div>
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a class="menu-link" href="homelife.html">
-                                            <div>Home Life</div>
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a class="menu-link" href="masters.html">
-                                            <div>Masters</div>
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a class="menu-link" href="newsletters.html">
-                                            <div>Newsletters</div>
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a class="menu-link" href="nicaraguatrip.html">
-                                            <div>Nicaragua Trip</div>
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a class="menu-link" href="perspective.html">
-                                            <div>Perspective</div>
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a class="menu-link" href="#">
-                                            <div>Pop Culture</div>
-                                        </a>
-                                        <ul class="sub-menu-container">
-                                            <li class="menu-item">
-                                                <a class="menu-link" href="#">
-                                                    <div>Despicable Me</div>
-                                                </a>
-                                                <ul class="sub-menu-container">
-                                                    <li class="menu-item">
-                                                        <a class="menu-link" href="despicablemeanimation.html">
-                                                            <div>Despicable Me Animation</div>
-                                                        </a>
-                                                    </li>
-                                                    <li class="menu-item">
-                                                        <a class="menu-link" href="despicablemecomics.html">
-                                                            <div>Despicable Me Comics</div>
-                                                        </a>
-                                                    </li>
-                                                    <li class="menu-item">
-                                                        <a class="menu-link" href="despicablemeideas.html">
-                                                            <div>Despicable Me Ideas</div>
-                                                        </a>
-                                                    </li>
-                                                    <li class="menu-item">
-                                                        <a class="menu-link" href="despicablemestoryboards.html">
-                                                            <div>Despicable Me Story Boards</div>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a class="menu-link" href="familyguy.html">
-                                                    <div>Family Guy</div>
-                                                </a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a class="menu-link" href="hungergames.html">
-                                                    <div>Hunger Games</div>
-                                                </a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a class="menu-link" href="powerboystory.html">
-                                                    <div>Power Boy Story</div>
-                                                </a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a class="menu-link" href="rocknroll.html">
-                                                    <div>Rock n' Roll</div>
-                                                </a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a class="menu-link" href="linkinpark.html">
-                                                    <div>Linkin Park</div>
-                                                </a>
-                                            </li>
-                                    <li class="menu-item">
-                                        <a class="menu-link" href="tshirtdesigns.html">
-                                            <div>Early T-Shirt Designs</div>
-                                        </a>
-                                    </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-                <div class="header-wrap-clone"></div>
-            </header>
-            <section id="page-title">
-                <div class="container clearfix">
-                    <h1>Master</h1>
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a>
-                        </li>
-                        <li class="breadcrumb-item active" aria-current="page">Master</li>
-                    </ol>
-                </div>
-            </section>
-            
-            <section id="content">
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/139_del2.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" />
-                    <span>Kandinsky Inspired</span>
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/178__ILL1765.jpg"  onclick="openModal();currentSlide(2)" class="hover-shadow" />
-                    <span>Open Plains</span>
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/178_del1.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow" />
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/178_mas0001.JPG" onclick="openModal();currentSlide(4)" class="hover-shadow" />
-                    <span>Van Gogh's Starry Night 1</span>
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/178_mas0002.JPG" onclick="openModal();currentSlide(5)" class="hover-shadow" />
-                    <span>Magritte Painting in a Painting</span>
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/178_mas0003.JPG" onclick="openModal();currentSlide(6)" class="hover-shadow" />
-                    <span>Renoir Teapots & Fruit</span>
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/178_mas0009.JPG" onclick="openModal();currentSlide(7)" class="hover-shadow" />
-                    <span>Escher Love Doves</span>
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/178_mas0010.JPG" onclick="openModal();currentSlide(8)" class="hover-shadow" />
-                    <span>Henry Matisse/ 1st Grade</span>
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/178_mas0015.JPG" alt="Frank Stella" onclick="openModal();currentSlide(9)" class="hover-shadow" />
-                    <span>Frank Stella</span>
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/178_mas0016.JPG" alt="Modrian" onclick="openModal();currentSlide(10)" class="hover-shadow" />
-                    <span>Modrian</span>
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/178_mas0018.JPG" alt="Basquiat" onclick="openModal();currentSlide(11)" class="hover-shadow" />
-                    <span>Basquiat</span>
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/178_mas0019.JPG" alt="Jasper John's Inspired" onclick="openModal();currentSlide(12)" class="hover-shadow" />
-                    <span>Jasper John's Inspired</span>
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/178_mas0020.JPG" alt="Van Gogh's Starry Night 2" onclick="openModal();currentSlide(13)" class="hover-shadow" />
-                    <span>Van Gogh's Starry Night 2</span>
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/178_mas0021.JPG" alt="Hockney inspired painting of boy swimming in swimming pool" onclick="openModal();currentSlide(14)" class="hover-shadow" />
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/178_mas0022.JPG" alt="Inspired by Jackson Pollock 1" onclick="openModal();currentSlide(15)" class="hover-shadow" />
-                    <span>Inspired by Jackson Pollock 1</span>
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/178_mas0023.JPG" alt="Inspired by Jackson Pollock 2" onclick="openModal();currentSlide(16)" class="hover-shadow" />
-                    <span>Inspired by Jackson Pollock 2</span>
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/178_mas0024.JPG" alt="Inspired by Jackson Pollock 3" onclick="openModal();currentSlide(17)" class="hover-shadow" />
-                    <span>Inspired by Jackson Pollock 3</span>
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/178_mas0025.JPG" alt="Rothko Inspired" onclick="openModal();currentSlide(18)" class="hover-shadow" />
-                    <span>Rothko Inspired</span>
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/178_mas0026.JPG" alt="Salvador Dali inspired Butterfly Catamaran" onclick="openModal();currentSlide(19)" class="hover-shadow" />
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/178_mas0027.JPG" alt="Matisse inspired faces" onclick="openModal();currentSlide(20)" class="hover-shadow" />
-                    <span>Matisse inspired faces</span>
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/178_watercolor.jpg" alt="Water Color inspired by" onclick="openModal();currentSlide(21)" class="hover-shadow" />
-                    <span>Water Color inspired by</span>
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/180_mas0030.JPG" alt="Klimpt inspired Tree of Life 2014" onclick="openModal();currentSlide(22)" class="hover-shadow" />
-                    <span>Klimpt inspired Tree of Life 2014</span>
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/140_mas0008.JPG" alt="Seurat The Ocean View" onclick="openModal();currentSlide(23)" class="hover-shadow" />
-                    <span>Seurat The Ocean View</span>
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/138_mas0005.JPG" alt="Andy Warhol Recreation of Soup Can" onclick="openModal();currentSlide(24)" class="hover-shadow" />
-                </a>
-                <a class="imgContent"> 
-                    <img src="images/master/thumbnail/148_mas0011.JPG" alt="Da Vinci Mona Lisa 2005" onclick="openModal();currentSlide(25)" class="hover-shadow" />
-                    <span>Da Vinci Mona Lisa 2005</span>
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/256_mas0012.JPG" alt="Monet 1899, Bridge over a pool of water lilies, Created: 9.5.09" onclick="openModal();currentSlide(26)" class="hover-shadow" />
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/133_mas0014.jpg" alt="Matisse The Gold Fish" onclick="openModal();currentSlide(27)" class="hover-shadow" />
-                    <span>Matisse The Gold Fish</span>
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/134_mas0017.jpg" alt="Klimt inspired Tree of Life 2006" onclick="openModal();currentSlide(28)" class="hover-shadow" />
-                    <span>Klimt inspired Tree of Life 2006</span>
-                </a>
-                <a class="imgContent">
-                    <img src="images/master/thumbnail/139_mas0013.JPG" alt="Claude Monet pointillism" onclick="openModal();currentSlide(29)" class="hover-shadow" />
-                    <span>Claude Monet pointillism</span>
-                </a>
-                <div id="myModal" class="modal">
-                    <span class="close cursor" onclick="closeModal()">&times;</span>
-                    <div class="modal-content">
-                        <div class="mySlides">
-                            <div class="numbertext">1/29</div>
-                            <img src="images/master/img/376_del2.jpg" alt="Kandinsky Inspired">
-                        </div>
-                        <div class="mySlides">
-                            <div class="numbertext">2/29</div>
-                            <img src="images/master/img/480__ILL1765.jpg" alt="Open Plains">
-                        </div>
-                        <div class="mySlides">
-                            <div class="numbertext">3/29</div>
-                            <img src="images/master/img/480_del1.jpg" alt="Modigliani Different Perspectives/ Styles of the Same Painting">
-                        </div>
-                        <div class="mySlides">
-                            <div class="numbertext">4/29</div>
-                            <img src="images/master/img/480_mas0001.JPG" alt="Van Gogh's Starry Night 1">
-                        </div>
-                        <div class="mySlides">
-                            <div class="numbertext">5/29</div>
-                            <img src="images/master/img/480_mas0002.JPG" alt="Magritte Painting in a Painting">
-                        </div>
-                        <div class="mySlides">
-                            <div class="numbertext">6/29</div>
-                            <img src="images/master/img/480_mas0003.JPG" alt="Renoir Teapots & Fruit">
-                        </div>
-                        <div class="mySlides">
-                            <div class="numbertext">7/29</div>
-                            <img src="images/master/img/480_mas0009.JPG" alt="Escher Love Doves">
-                        </div>
-                        <div class="mySlides">
-                            <div class="numbertext">8/29</div>
-                            <img src="images/master/img/480_mas0010.JPG" alt="Henry Matisse/ 1st Grade">
-                        </div>
-                        <div class="mySlides">
-                            <div class="numbertext">9/29</div>
-                            <img src="images/master/img/480_mas0015.jpg" alt="Frank Stella">
-                        </div>
-                        <div class="mySlides">
-                            <div class="numbertext">10/29</div>
-                            <img src="images/master/img/480_mas0016.jpg" alt="Modrian">
-                        </div>
-                        <div class="mySlides">
-                            <div class="numbertext">11/29</div>
-                            <img src="images/master/img/480_mas0018.jpg" alt="Basquiat">
-                        </div>
-                        <div class="mySlides">
-                            <div class="numbertext">12/29</div>
-                            <img src="images/master/img/480_mas0019.JPG" alt="Jasper John's Inspired">
-                        </div>
-                        <div class="mySlides">
-                            <div class="numbertext">13/29</div>
-                            <img src="images/master/img/480_mas0020.jpg" alt="Van Gogh's Starry Night 2">
-                        </div>
-                        <div class="mySlides">
-                            <div class="numbertext">14/29</div>
-                            <img src="images/master/img/479_mas0021.jpg" alt="Hockney inspired painting of boy swimming in swimming pool">
-                        </div>
-                        <div class="mySlides">
-                            <div class="numbertext">15/29</div>
-                            <img src="images/master/img/480_mas0022.jpg" alt="Inspired by Jackson Pollock 1">
-                        </div>
-                        <div class="mySlides">
-                            <div class="numbertext">16/29</div>
-                            <img src="images/master/img/480_mas0023.JPG" alt="Inspired by Jackson Pollock 2">
-                        </div>
-                        <div class="mySlides">
-                            <div class="numbertext">17/29</div>
-                            <img src="images/master/img/479_mas0024.JPG" alt="Inspired by Jackson Pollock 3">
-                        </div>
-                        <div class="mySlides">
-                            <div class="numbertext">18/29</div>
-                            <img src="images/master/img/480_mas0025.jpg" alt="Rothko Inspired">
-                        </div>
-
-                        <div class="mySlides">
-                            <div class="numbertext">19/29</div>
-                            <img src="images/master/img/480_mas0026.jpg" alt="Salvador Dali inspired Butterfly Catamaran">
-                        </div>
-
-                        <div class="mySlides">
-                            <div class="numbertext">20/29</div>
-                            <img src="images/master/img/480_mas0027.jpg" alt="Matisse inspired faces">
-                        </div>
-                        <div class="mySlides">
-                            <div class="numbertext">21/29</div>
-                            <img src="images/master/img/480_watercolor.JPG" alt="Water Color inspired by">
-                        </div>
-                        <div class="mySlides">
-                            <div class="numbertext">22/29</div>
-                            <img src="images/master/img/358_mas0030.jpg" alt="Klimpt inspired Tree of Life 2014">
-                        </div>
-
-                        <div class="mySlides">
-                            <div class="numbertext">23/29</div>
-                            <img src="images/master/img/377_mas0008.jpg" alt="Seurat The Ocean View">
-                        </div>
-
-                        <div class="mySlides">
-                            <div class="numbertext">24/29</div>
-                            <img src="images/master/img/373_mas0005.jpg" alt="Andy Warhol Recreation of Soup Can">
-                        </div>
-
-                        <div class="mySlides">
-                            <div class="numbertext">25/29</div>
-                            <img src="images/master/img/399_mas0011.JPG" alt="Da Vinci Mona Lisa 2005">
-                        </div>
-                        <div class="mySlides">
-                            <div class="numbertext">26/29</div>
-                            <img src="images/master/img/402_mas0012.jpg" alt="Monet 1899, Bridge over a pool of water lilies, Created: 9.5.09">
-                        </div>
-
-                        <div class="mySlides">
-                            <div class="numbertext">27/29</div>
-                            <img src="images/master/img/359_mas0014.jpg" alt="Matisse The Gold Fish">
-                        </div>
-
-                        <div class="mySlides">
-                            <div class="numbertext">28/29</div>
-                            <img src="images/master/img/363_mas0017.jpg" alt="Klimt inspired Tree of Life 2006">
-                        </div>
-
-                        <div class="mySlides">
-                            <div class="numbertext">29/29</div>
-                            <img src="images/master/img/376_mas0013.JPG" alt="Claude Monet pointillism">
-                        </div>
-                    </div>
-
-                    <!-- Next/previous controls -->
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                    <!-- Caption text -->
-                    <div class="caption-container">
-                        <p id="caption"></p>
-                    </div>
-                </div>
-            </section>
-            <!-- #content end -->
-
-            <footer id="footer" class="dark">
-                <div id="copyrights">
-                    <div class="container">
-                        <div class="row col-mb-30">
-                            <div class="col-md-6 text-center text-md-left">Copyright &copy; ethanAart 2021 All Rights Reserved
-                                <br>
-                                <div class="copyright-links"><a href="#">Developed in association with Westcliff University Web Development Boot Camp</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- #copyrights end -->
-            </footer>
-            <!-- #footer end -->
+            </div>
         </div>
-        <!-- #wrapper end -->
-        <div id="gotoTop" class="icon-angle-up"></div>
-        <script src="js/jquery.js"></script>
-        <script src="js/plugins.min.js"></script>
-        <script src="assets/js/functions.js"></script>
-        <style>
-            ol.flex-control-nav li:hover a, ol.flex-control-nav li a.flex-active {
-                background-color: #383838;
-            }
-            ol.flex-control-nav li a {
-                border: 1px solid #383838;
-            }
-            @media screen and (min-width:480px){
-            #wowslider-container1 {
-                height: 700px;
-                }
-            }
-        </style>
-        <!--disable right click and copy & paste-->
-        <script type="text/javascript">
-            $(document).ready(function(){$("body").bind("cut copy paste",function(n){n.preventDefault()}),$("body").on("contextmenu",function(n){return!1})});
-        </script>
-        <!-- init Masonry --> 
-        <script>
-            /*
-            var $grid = $('.grid').masonry({
-                itemSelector: '.grid-item',
-                percentPosition: true,
-                columnWidth: '.grid-sizer'
-            });
 
-            // layout Masonry after each image loads
-            $grid.imagesLoaded().progress( function() {
-                $grid.masonry();
-            });*/
-        </script>
-        <script>
-            // Open the Modal
-            function openModal(e) {
-                document.getElementById("myModal").style.display = "block";
-            }
-            
-            // Close the Modal
-            function closeModal() {
-                document.getElementById("myModal").style.display = "none";
-            }
-            
-            var slideIndex = 1;
-                showSlides(slideIndex);
-            
-            // Next/previous controls
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
-            }
+    </section>
+		<!-- #content end -->
+		<footer id="footer" class="dark">
+			<div id="copyrights">
+				<div class="container">
+					<div class="row col-mb-30">
+						<div class="col-md-6 text-center text-md-left">Copyright &copy; ethanAart 2021 All Rights Reserved
+							<br>
+							<div class="copyright-links"><a href="#">Developed in association with Westcliff University Web Development Boot Camp</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- #copyrights end -->
+		</footer>
+		<!-- #footer end -->
+	</div>
+	<!-- #wrapper end -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
+	<script src="assets/js/functions.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-            // Thumbnail image controls
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
-            }
-            
-            function showSlides(n) {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                var captionText = document.getElementById("caption");
-                
-                if (n > slides.length) {slideIndex = 1}
-                if (n < 1) {slideIndex = slides.length}
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                slides[slideIndex-1].style.display = "block";
-                document.getElementById("caption").innerHTML= slides[slideIndex-1].getElementsByTagName("img")[0].alt;
-            }
-        </script>
-    </body>
+	<style>
+		ol.flex-control-nav li:hover a, ol.flex-control-nav li a.flex-active {
+		    background-color: #383838;
+		}
+		ol.flex-control-nav li a {
+		    border: 1px solid #383838;
+		}
+		@media screen and (min-width:480px){
+		#wowslider-container1 {
+		    height: 700px;
+			}
+		}
+	</style>
+	<!--disable right click and copy & paste-->
+	<script type="text/javascript">
+		$(document).ready(function(){$("body").bind("cut copy paste",function(n){n.preventDefault()}),$("body").on("contextmenu",function(n){return!1})});
+	</script>
+</body>
+
 </html>
